@@ -153,9 +153,9 @@
   <ItemGroup>
     <None Include="certificadoSxsDigi21.pfx" />
     <None Include="packages.config" />
-    <None Include="Recursos.es-ES.resx" />
+    <EmbeddedResource Include="Recursos.es-ES.resx" />
     <EmbeddedResource Include="Recursos.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Recursos.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
