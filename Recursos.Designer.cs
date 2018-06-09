@@ -22,7 +22,7 @@ namespace Digi21.Utilities {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Recursos {
+    internal class Recursos {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace Digi21.Utilities {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Resources.ResourceManager ResourceManager {
+        internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Digi21.Utilities.Recursos", typeof(Recursos).Assembly);
@@ -51,7 +51,7 @@ namespace Digi21.Utilities {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Globalization.CultureInfo Culture {
+        internal static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace Digi21.Utilities {
         /// <summary>
         ///   Looks up a localized string similar to The point not intersects the line..
         /// </summary>
-        public static string ElPuntoNoInterseccionaConLaLinea {
+        internal static string ElPuntoNoInterseccionaConLaLinea {
             get {
                 return ResourceManager.GetString("ElPuntoNoInterseccionaConLaLinea", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace Digi21.Utilities {
         /// <summary>
         ///   Looks up a localized string similar to The entity does not belong to any file.
         /// </summary>
-        public static string EntidadNoPerteneceNingunArchivo {
+        internal static string EntidadNoPerteneceNingunArchivo {
             get {
                 return ResourceManager.GetString("EntidadNoPerteneceNingunArchivo", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace Digi21.Utilities {
         /// <summary>
         ///   Looks up a localized string similar to The two entities have a different number of codes.
         /// </summary>
-        public static string LasDosEntidadesTienenUnNumeroDistintoDeCodigos {
+        internal static string LasDosEntidadesTienenUnNumeroDistintoDeCodigos {
             get {
                 return ResourceManager.GetString("LasDosEntidadesTienenUnNumeroDistintoDeCodigos", resourceCulture);
             }

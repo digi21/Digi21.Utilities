@@ -141,6 +141,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Recursos.resx</DependentUpon>
     </Compile>
+    <Compile Include="Recursos.es.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Recursos.es.resx</DependentUpon>
+    </Compile>
     <Compile Include="UtilidadesDigiNG.cs" />
     <Compile Include="UtilidadesEntity.cs" />
     <Compile Include="UtilidadesReadOnlyLine.cs" />
@@ -152,12 +157,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="certificadoSxsDigi21.pfx" />
-    <None Include="packages.config" />
-    <EmbeddedResource Include="Recursos.es.resx" />
+    <EmbeddedResource Include="Recursos.es.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Recursos.es.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Recursos.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
+      <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Recursos.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
