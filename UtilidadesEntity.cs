@@ -216,7 +216,7 @@ namespace Digi21.Utilities
             //if (null == listaErrores)
             //    return true;
 
-            return listaErrores.Count == 0;
+            return listaErrores == null ? true : listaErrores.Count == 0;
         }
     }
 }
