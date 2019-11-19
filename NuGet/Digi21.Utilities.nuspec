@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Digi21.Utilities</id>
+    <version>17.2.0</version>
+    <title>Digi21.Utilities</title>
+    <authors>José Ángel Martínez Torres</authors>
+    <owners>Dreaming With Objects S.L.</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <icon>IconoDigi21.png</icon>
+    <projectUrl>https://github.com/digi21/Digi21.Utilities</projectUrl>
+    <repository type="git" url="https://github.com/digi21/Digi21.Utilities.git" branch="master" commit="8a2d7a55087e94ed6727d6ef6efc84da3899b4c9"/>
+    <description>Este paquete contiene métodos de extensión para los tipos enumerados en el ensamblado Digi21.DigiNG que facilitan la tarea de
+desarrollar aplicaciones con Digi3D.NET.</description>
+    <summary>Este paquete contiene métodos de extensión para los tipos enumerados en el ensamblado Digi21.DigiNG que facilitan la tarea de
+desarrollar aplicaciones con Digi3D.NET.</summary>
+    <releaseNotes>Paquete NuGet compatible con proyectos nativos.</releaseNotes>
+    <copyright>(c) 2000-2019 Dreaming With Objects S.L.</copyright>
+    <language>es-ES</language>
+    <tags>Digi3D, Digi3D.NET, Digi21, Digi</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.6">
+        <dependency id="Digi21.DigiNG" version="17.2.0" />
+        <dependency id="Digi21.DigiNG.Plugin" version="17.2.0" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\Digi21.Utilities\bin\Release\es\Digi21.Utilities.resources.dll" target="lib\net46\es\Digi21.Utilities.resources.dll" />
+    <file src="..\Digi21.Utilities\bin\Release\Digi21.Utilities.dll" target="lib\net46\Digi21.Utilities.dll" />
+    <file src="..\Digi21.Utilities\bin\Release\Digi21.Utilities.pdb" target="lib\net46\Digi21.Utilities.pdb" />
+    <file src="..\Digi21.Utilities\bin\Release\Digi21.Utilities.xml" target="lib\net46\Digi21.Utilities.xml" />
+    <file src="install.ps1" target="tools\install.ps1" />
+    <file src="IconoDigi21.png" target="IconoDigi21.png" />
+  </files>
+</package>
