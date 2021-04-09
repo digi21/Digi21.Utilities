@@ -104,7 +104,7 @@ namespace Digi21.Utilities
             {
                 try
                 {
-                    if (DigiNG.DigiNG.DigiTab[código.Name].Visibility)
+                    if (código.Visible)
                         return true;
                 }
                 catch (Exception)
@@ -133,7 +133,7 @@ namespace Digi21.Utilities
                 case ReadOnlyPolygon polígono:
                     // Devolvemos primero el contorno exterior como una línea cerrada
                     var línea = new Line(polígono.Codes);
-                    línea.Points.Add(polígono.Points);
+                    línea.Points.AddRange(polígono.Points);
                     yield return línea;
 
                     // Devolvemos cada uno de los huecos que son líneas cerradas
