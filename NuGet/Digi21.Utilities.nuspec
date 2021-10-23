@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Digi21.Utilities</id>
-    <version>21.0.0</version>
+    <version>22.0.0</version>
     <title>Digi21.Utilities</title>
     <authors>José Ángel Martínez Torres</authors>
     <owners>Dreaming With Objects S.L.</owners>
@@ -21,8 +21,8 @@ desarrollar aplicaciones con Digi3D.NET.</summary>
     <tags>Digi3D, Digi3D.NET, Digi21, Digi</tags>
     <dependencies>
       <group targetFramework=".NETFramework4.6">
-        <dependency id="Digi21.DigiNG" version="21.0.0" />
-        <dependency id="Digi21.DigiNG.Plugin" version="21.0.0" />
+        <dependency id="Digi21.DigiNG" version="22.0.0" />
+        <dependency id="Digi21.DigiNG.Plugin" version="22.0.0" />
       </group>
     </dependencies>
   </metadata>
