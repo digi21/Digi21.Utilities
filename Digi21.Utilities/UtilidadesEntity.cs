@@ -104,7 +104,7 @@ namespace Digi21.Utilities
             {
                 try
                 {
-                    if (código.Visible)
+                    if (código.Visible != 0)
                         return true;
                 }
                 catch (Exception)
