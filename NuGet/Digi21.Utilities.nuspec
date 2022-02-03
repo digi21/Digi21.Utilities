@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Digi21.Utilities</id>
-    <version>22.0.0</version>
+    <version>22.1.0</version>
     <title>Digi21.Utilities</title>
     <authors>José Ángel Martínez Torres</authors>
     <owners>Dreaming With Objects S.L.</owners>
@@ -16,13 +16,13 @@ desarrollar aplicaciones con Digi3D.NET.</description>
     <summary>Este paquete contiene métodos de extensión para los tipos enumerados en el ensamblado Digi21.DigiNG que facilitan la tarea de
 desarrollar aplicaciones con Digi3D.NET.</summary>
     <releaseNotes>Paquete NuGet compatible con proyectos nativos.</releaseNotes>
-    <copyright>(c) 2000-2021 Dreaming With Objects S.L.</copyright>
+    <copyright>(c) 2000-2022 Dreaming With Objects S.L.</copyright>
     <language>es-ES</language>
     <tags>Digi3D, Digi3D.NET, Digi21, Digi</tags>
     <dependencies>
       <group targetFramework=".NETFramework4.6">
-        <dependency id="Digi21.DigiNG" version="22.0.0" />
-        <dependency id="Digi21.DigiNG.Plugin" version="22.0.0" />
+        <dependency id="Digi21.DigiNG" version="22.2.0" />
+        <dependency id="Digi21.DigiNG.Plugin" version="22.2.0" />
       </group>
     </dependencies>
   </metadata>
