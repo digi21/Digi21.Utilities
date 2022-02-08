@@ -40,7 +40,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
 #else
-[assembly: AssemblyVersion("22.0.0.0")]
+[assembly: AssemblyVersion("22.1.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
 #endif
 
