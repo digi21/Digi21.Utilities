@@ -65,49 +65,64 @@ public class MemoryDrawingFile : IDrawingFile, IDisposable
 
     public ReadOnlyComplex Add(Complex complex)
     {
+        FinalizaLecturaSiNoFinalizada();
         _contenedor.Add(complex);
         return _archivoDibujo.Add(complex);
     }
 
     public ReadOnlyPolygon Add(Polygon polygon)
     {
+        FinalizaLecturaSiNoFinalizada();
         _contenedor.Add(polygon);
         return _archivoDibujo.Add(polygon);
     }
 
     public ReadOnlyText Add(Text text)
     {
+        FinalizaLecturaSiNoFinalizada();
         _contenedor.Add(text);
         return _archivoDibujo.Add(text);
     }
 
     public ReadOnlyPoint Add(Point point)
     {
+        FinalizaLecturaSiNoFinalizada();
         _contenedor.Add(point);
         return _archivoDibujo.Add(point);
     }
 
     public ReadOnlyLine Add(Line line)
     {
+        FinalizaLecturaSiNoFinalizada();
         _contenedor.Add(line);
         return _archivoDibujo.Add(line);
     }
 
     public void Add(IEnumerable<Entity> entities)
     {
+        FinalizaLecturaSiNoFinalizada();
         _contenedor.AddRange(entities);
         _archivoDibujo.Add(entities);
     }
 
     public void Add(Entity entity)
     {
+        FinalizaLecturaSiNoFinalizada();
         _contenedor.Add(entity);
         _archivoDibujo.Add(entity);
     }
 
-    public void Delete(IEnumerable<Entity> entities) => _archivoDibujo.Delete(entities);
+    public void Delete(IEnumerable<Entity> entities)
+    {
+        FinalizaLecturaSiNoFinalizada();
+        _archivoDibujo.Delete(entities);
+    }
 
-    public void Delete(Entity entity) => _archivoDibujo.Delete(entity);
+    public void Delete(Entity entity)
+    {
+        FinalizaLecturaSiNoFinalizada();
+        _archivoDibujo.Delete(entity);
+    }
 
     public string Wkt => _archivoDibujo.Wkt;
     public IDictionary<string, int> DatabaseTables => _archivoDibujo.DatabaseTables;
@@ -135,6 +150,16 @@ public class MemoryDrawingFile : IDrawingFile, IDisposable
 
             _contenedor.Add(_enumerador.Current);
             return true;
+        }
+    }
+
+    private void FinalizaLecturaSiNoFinalizada()
+    {
+        if (_finalizadaLectura)
+            return;
+
+        while (CargaSiguienteGeometriaSiEsPosible())
+        {
         }
     }
 
