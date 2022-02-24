@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Digi21.DigiNG.Entities;
 using Digi21.DigiNG.IO;
@@ -13,7 +14,7 @@ using Digi21.Math;
 /// El enumerador que proporciona esta clase se encarga de ir leyendo geometrías del archivo de dibujo bajo demanda, de manera que si no se enumera el archivo
 /// no se consumirá memoria.
 /// </remarks>
-public class MemoryDrawingFile : IDrawingFile
+public class MemoryDrawingFile : IDrawingFile, IDisposable
 {
     private readonly IDrawingFile _archivoDibujo;
     private readonly IEnumerator<Entity> _enumerador;
@@ -158,5 +159,12 @@ public class MemoryDrawingFile : IDrawingFile
         public Entity Current => _padre._contenedor[_posicion];
 
         object IEnumerator.Current => Current;
+    }
+
+    public void Dispose()
+    {
+        _enumerador?.Dispose();
+        if( _archivoDibujo is IDisposable disp)
+            disp.Dispose();
     }
 }
