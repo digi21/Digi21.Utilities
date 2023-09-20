@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Digi21.Utilities {
+namespace Digi21.Utilities.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Digi21.Utilities {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Digi21.Utilities.Recursos", typeof(Recursos).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Digi21.Utilities.Properties.Recursos", typeof(Recursos).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

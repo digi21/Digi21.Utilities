@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Digi21.DigiNG.Entities;
+using Digi21.Utilities.Properties;
 
 namespace Digi21.Utilities
 {

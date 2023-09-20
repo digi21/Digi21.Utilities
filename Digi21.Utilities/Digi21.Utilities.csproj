@@ -8,6 +8,10 @@
     <SccProvider>SAK</SccProvider>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
+	<PropertyGroup>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+	</PropertyGroup>
   <PropertyGroup>
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
@@ -18,7 +22,7 @@
     <DelaySign>false</DelaySign>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <DocumentationFile>bin\Debug\x64\Digi21.Utilities.xml</DocumentationFile>
+    <DocumentationFile></DocumentationFile>
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
@@ -29,23 +33,10 @@
     <CodeAnalysisRuleSet>..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Team Tools\Static Analysis Tools\Rule Sets\MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Update="Recursos.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Recursos.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Recursos.es.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Recursos.es.resx</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Update="Recursos.es.resx">
+    <EmbeddedResource Update="Properties\Recursos.es-ES.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Recursos.es.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="Recursos.resx">
+    <EmbeddedResource Update="Properties\Recursos.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Recursos.Designer.cs</LastGenOutput>
     </EmbeddedResource>
@@ -58,6 +49,13 @@
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Properties\Recursos.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Recursos.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
   <PropertyGroup>
     <AssemblyTitle>Digi21.UtilitiesD</AssemblyTitle>
     <Description>Implementa tipos de utilidad utilizados por componentes de Digi3D</Description>
@@ -66,5 +64,7 @@
     <Copyright>Copyright © 2010-2021 José Ángel Martínez Torres</Copyright>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
+    <BaseOutputPath>$(SolutionDir)bin\</BaseOutputPath>
+    <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
   </PropertyGroup>
 </Project>
