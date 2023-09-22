@@ -6,7 +6,7 @@
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateAssemblyInfo>True</GenerateAssemblyInfo>
   </PropertyGroup>
 	<PropertyGroup>
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
@@ -33,6 +33,12 @@
     <CodeAnalysisRuleSet>..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Team Tools\Static Analysis Tools\Rule Sets\MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="..\NuGet\IconoDigi21.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
     <EmbeddedResource Update="Properties\Recursos.es-ES.resx">
       <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
@@ -41,11 +47,16 @@
       <LastGenOutput>Recursos.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Digi3D.NET\Progsh\src\Digi21.DigiNG.Plugin\Digi21.DigiNG.Plugin.vcxproj" />
-    <ProjectReference Include="..\..\Digi3D.NET\Progsh\src\Digi21.DigiNG\Digi21.DigiNG.vcxproj" />
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <PackageReference Include="Digi21.DigiNG" Version="23.2.0" />
+    <PackageReference Include="Digi21.DigiNG.Plugin" Version="23.2.0" />
   </ItemGroup>
-  <ItemGroup>
+	<ItemGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+		<ProjectReference Include="..\..\Digi3D.NET\Progsh\src\Digi21.DigiNG.Plugin\Digi21.DigiNG.Plugin.vcxproj" />
+		<ProjectReference Include="..\..\Digi3D.NET\Progsh\src\Digi21.DigiNG\Digi21.DigiNG.vcxproj" />
+	</ItemGroup>
+
+	<ItemGroup>
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
   </ItemGroup>
@@ -58,13 +69,23 @@
   </ItemGroup>
   <PropertyGroup>
     <AssemblyTitle>Digi21.UtilitiesD</AssemblyTitle>
-    <Description>Implementa tipos de utilidad utilizados por componentes de Digi3D</Description>
+    <Description>Este paquete contiene métodos de extensión para los tipos enumerados en el ensamblado Digi21.DigiNG que facilitan la tarea de
+desarrollar aplicaciones con Digi3D.NET.</Description>
     <Company>Dreaming With Objects S.L.</Company>
     <Product>Digi21.Utilities</Product>
-    <Copyright>Copyright © 2010-2021 José Ángel Martínez Torres</Copyright>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <Copyright>(c) 2000-2023 Dreaming With Objects S.L.</Copyright>
+    <AssemblyVersion>23.2.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
     <BaseOutputPath>$(SolutionDir)bin\</BaseOutputPath>
     <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
+    <Title>$(AssemblyName)</Title>
+    <Version>23.2.0</Version>
+    <Authors>José Ángel Martínez Torres</Authors>
+    <PackageProjectUrl>https://digi3d.net</PackageProjectUrl>
+    <PackageIcon>IconoDigi21.png</PackageIcon>
+    <RepositoryUrl>https://github.com/digi21/Digi21.Utilities.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Digi3D, Digi3D.NET, Digi21, Digi</PackageTags>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 </Project>
