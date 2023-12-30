@@ -5,6 +5,8 @@ using Digi21.DigiNG.Entities;
 using Digi21.DigiNG.IO;
 using Digi21.Math;
 
+namespace Digi21.Utilities;
+
 /// <summary>
 /// Esta clase encapsula un IDrawingFile para que se comporte como una lista de geometrías
 /// </summary>
@@ -14,7 +16,7 @@ using Digi21.Math;
 /// El enumerador que proporciona esta clase se encarga de ir leyendo geometrías del archivo de dibujo bajo demanda, de manera que si no se enumera el archivo
 /// no se consumirá memoria.
 /// </remarks>
-public class MemoryDrawingFile : IDrawingFile, IDisposable
+public sealed class MemoryDrawingFile : IDrawingFile, IDisposable
 {
     private readonly IDrawingFile _archivoDibujo;
     private readonly IEnumerator<Entity> _enumerador;
