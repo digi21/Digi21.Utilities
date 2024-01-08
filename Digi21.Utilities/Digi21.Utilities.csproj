@@ -37,6 +37,10 @@
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
+    <None Include="..\NuGet\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="Properties\Recursos.es-ES.resx">
@@ -47,11 +51,15 @@
       <LastGenOutput>Recursos.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
+	<ItemGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
     <PackageReference Include="Digi21.DigiNG" Version="24.0.0" />
     <PackageReference Include="Digi21.DigiNG.Plugin" Version="24.0.0" />
   </ItemGroup>
-  <ItemGroup>
+	<ItemGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+		<ProjectReference Include="..\..\Digi3D.NET\Progsh\src\Digi21.DigiNG.Plugin\Digi21.DigiNG.Plugin.vcxproj" />
+		<ProjectReference Include="..\..\Digi3D.NET\Progsh\src\Digi21.DigiNG\Digi21.DigiNG.vcxproj" />
+	</ItemGroup>
+	<ItemGroup>
     <Compile Update="Properties\Recursos.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -78,5 +86,7 @@ desarrollar aplicaciones con Digi3D.NET.</Description>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Digi3D, Digi3D.NET, Digi21, Digi</PackageTags>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 </Project>
