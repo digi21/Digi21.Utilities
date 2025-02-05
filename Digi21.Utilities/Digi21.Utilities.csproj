@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net8.0-windows10.0.17763.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <OutputType>Library</OutputType>
     <GenerateAssemblyInfo>True</GenerateAssemblyInfo>
   </PropertyGroup>
@@ -69,12 +69,12 @@ desarrollar aplicaciones con Digi3D.NET.</Description>
     <Company>Dreaming With Objects S.L.</Company>
     <Product>Digi21.Utilities</Product>
     <Copyright>(c) 2000-2025 Dreaming With Objects S.L.</Copyright>
-    <AssemblyVersion>24.0.0</AssemblyVersion>
-    <FileVersion>24.0.0.0</FileVersion>
+    <AssemblyVersion>24.0.1.0</AssemblyVersion>
+    <FileVersion>24.0.1.0</FileVersion>
     <BaseOutputPath>$(SolutionDir)bin\</BaseOutputPath>
     <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
     <Title>$(AssemblyName)</Title>
-    <Version>24.0.0</Version>
+    <Version>24.0.1</Version>
     <Authors>José Ángel Martínez Torres</Authors>
     <PackageProjectUrl>https://digi3d.net</PackageProjectUrl>
     <PackageIcon>IconoDigi21.png</PackageIcon>
