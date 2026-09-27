@@ -4,6 +4,8 @@
     <OutputType>Library</OutputType>
     <GenerateAssemblyInfo>True</GenerateAssemblyInfo>
   <PreserveCompilationContext>true</PreserveCompilationContext>
+    <!-- El resolvedor de ensamblados de Digi21.DigiNG va en las aplicaciones, no en esta biblioteca. -->
+    <Digi21DisableAssemblyResolver>true</Digi21DisableAssemblyResolver>
   </PropertyGroup>
 	<PropertyGroup>
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
@@ -40,7 +42,7 @@
     </None>
   </ItemGroup>
   <ItemGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
-    <PackageReference Include="Digi21.DigiNG.Plugin" Version="24.0.0" />
+    <PackageReference Include="Digi21.DigiNG.Plugin" Version="26.0.0" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="Properties\Recursos.es-ES.resx">
@@ -65,22 +67,22 @@
   <PropertyGroup>
     <AssemblyTitle>Digi21.UtilitiesD</AssemblyTitle>
     <Description>Este paquete contiene métodos de extensión para los tipos enumerados en el ensamblado Digi21.DigiNG que facilitan la tarea de
-desarrollar aplicaciones con Digi3D.NET.</Description>
+desarrollar aplicaciones con Digi3D.AI.</Description>
     <Company>Dreaming With Objects S.L.</Company>
     <Product>Digi21.Utilities</Product>
-    <Copyright>(c) 2000-2025 Dreaming With Objects S.L.</Copyright>
-    <AssemblyVersion>24.0.1.0</AssemblyVersion>
-    <FileVersion>24.0.1.0</FileVersion>
+    <Copyright>(c) 2000-2026 Dreaming With Objects S.L.</Copyright>
+    <AssemblyVersion>26.0.0.0</AssemblyVersion>
+    <FileVersion>26.0.0.0</FileVersion>
     <BaseOutputPath>$(SolutionDir)bin\</BaseOutputPath>
     <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
     <Title>$(AssemblyName)</Title>
-    <Version>24.0.1</Version>
+    <Version>26.0.0</Version>
     <Authors>José Ángel Martínez Torres</Authors>
     <PackageProjectUrl>https://digi3d.net</PackageProjectUrl>
     <PackageIcon>IconoDigi21.png</PackageIcon>
     <RepositoryUrl>https://github.com/digi21/Digi21.Utilities.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>Digi3D, Digi3D.NET, Digi21, Digi</PackageTags>
+    <PackageTags>Digi3D, Digi3D.AI, Digi21, Digi</PackageTags>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
