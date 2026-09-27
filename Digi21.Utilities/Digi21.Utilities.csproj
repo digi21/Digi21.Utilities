@@ -15,7 +15,11 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>certificadoSxsDigi21.pfx</AssemblyOriginatorKeyFile>
+    <!-- Solo la clave pública: da la identidad de Digi21 sin la clave privada, y dotnet build puede firmar. -->
+    <AssemblyOriginatorKeyFile>..\Digi21.PublicKey.snk</AssemblyOriginatorKeyFile>
+    <PublicSign>true</PublicSign>
+    <!-- Con MSBuild de Visual Studio los satélites se generarían con AL.exe, que exige la clave privada. -->
+    <GenerateSatelliteAssembliesForCore>true</GenerateSatelliteAssembliesForCore>
   </PropertyGroup>
   <PropertyGroup>
     <DelaySign>false</DelaySign>
