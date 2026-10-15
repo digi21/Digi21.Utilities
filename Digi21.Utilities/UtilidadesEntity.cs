@@ -167,6 +167,22 @@ namespace Digi21.Utilities
                 listaErrores.Add(Recursos.LasDosEntidadesTienenUnNumeroDistintoDeCodigos);
             }
 
+            // Se comparan los nombres como multiconjunto: cada código de una entidad debe estar en la otra.
+            var sinEmparejarB = entidadB.Codes.Select(c => c.Name).ToList();
+            var sinEmparejarA = new List<string>();
+            foreach (var código in entidadA.Codes)
+            {
+                if (!sinEmparejarB.Remove(código.Name))
+                    sinEmparejarA.Add(código.Name);
+            }
+
+            foreach (var nombre in sinEmparejarA.Concat(sinEmparejarB))
+            {
+                if (null == listaErrores)
+                    return false;
+                listaErrores.Add(string.Format(Recursos.ElCodigoXNoEstaEnLaOtraEntidad, nombre));
+            }
+
             //var atributosA = entidadA.Owner.DatabaseTables.DatabaseAttributes;
             //var atributosB = entidadB.DatabaseAttributes;
             //foreach (var código in atributosA)

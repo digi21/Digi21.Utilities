@@ -120,6 +120,9 @@
   <data name="ElPuntoNoInterseccionaConLaLinea" xml:space="preserve">
     <value>The point not intersects the line.</value>
   </data>
+  <data name="ElCodigoXNoEstaEnLaOtraEntidad" xml:space="preserve">
+    <value>The code {0} is not in the other entity</value>
+  </data>
   <data name="EntidadNoPerteneceNingunArchivo" xml:space="preserve">
     <value>The entity does not belong to any file</value>
   </data>

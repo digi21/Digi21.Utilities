@@ -70,6 +70,15 @@ namespace Digi21.Utilities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The code {0} is not in the other entity.
+        /// </summary>
+        internal static string ElCodigoXNoEstaEnLaOtraEntidad {
+            get {
+                return ResourceManager.GetString("ElCodigoXNoEstaEnLaOtraEntidad", resourceCulture);
+            }
+        }
+
+        /// <summary>
         ///   Looks up a localized string similar to The entity does not belong to any file.
         /// </summary>
         internal static string EntidadNoPerteneceNingunArchivo {
