@@ -33,12 +33,24 @@ namespace Digi21.Utilities
         /// <exception cref="Exception">En caso de que la entidad no pertenezca a ningún archivo de dibujo, se lanza una excepción.</exception>
         public static int ArchivoPropietarioDeEntidad(Entity entidad)
         {
-            if (DigiNG.DigiNG.DrawingFile.Contains(entidad))
+            var activo = DigiNG.DigiNG.DrawingFile;
+            if (activo.Contains(entidad))
                 return 0;
 
-            for (var i = 0; i < DigiNG.DigiNG.ReferenceFiles.Length; i++)
-                if (DigiNG.DigiNG.ReferenceFiles[i].Contains(entidad))
+            // Cada lectura de ReferenceFiles crea objetos nuevos, así que los archivos se comparan por ruta: el Owner de una
+            // entidad de un archivo de referencia es un DrawingFile, no el objeto de ReferenceFiles.
+            var referencias = DigiNG.DigiNG.ReferenceFiles;
+            var propietario = entidad.Owner;
+            for (var i = 0; i < referencias.Length; i++)
+            {
+                if (propietario != null
+                    ? string.Equals(propietario.Path, referencias[i].Path, StringComparison.OrdinalIgnoreCase)
+                    : referencias[i].Any(e => ReferenceEquals(e, entidad)))
                     return 1 + i;
+            }
+
+            if (propietario == null && activo.Any(e => ReferenceEquals(e, entidad)))
+                return 0;
 
             throw new Exception(Recursos.EntidadNoPerteneceNingunArchivo);
         }
